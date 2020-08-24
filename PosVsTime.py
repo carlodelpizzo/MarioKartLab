@@ -47,6 +47,12 @@ for t in range(len(frame_list)):
 racer1_label = 'Racer 3 (maxV = {}, a = {})'.format(racer1_v, racer1_a)
 racer2_label = 'Racer 2 (maxV = {}, a = {})'.format(racer2_v, racer2_a)
 
+finish = []
+
+for i in range(len(frame_list)):
+    finish.append(1000)
+
+plt.plot(frame_list, finish, '--', color='black')
 plt.plot(frame_list, racer2_pos, label=racer2_label)
 plt.plot(frame_list, racer1_pos, label=racer1_label, color='red')
 
